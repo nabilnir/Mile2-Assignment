@@ -17,12 +17,24 @@
 
 /*colors*/
 
+
+
 .pri-color{
     color: #E95A08;
 }
 
 .sec-color{
     color: #8987A1;
+}
+
+.pri-btn{
+    background-color: #E95A08;
+    font-family: "Inter", sans-serif;
+    padding: 10px 20px;
+    color: white;
+    width: 100%;
+    border: 0;
+    cursor: pointer;
 }
 
 
@@ -87,7 +99,7 @@ body {
     justify-content: space-between;
     height: 486px;
     margin-top: 115px;
-    margin-bottom: 120px;
+    margin-bottom: 70px;
 }
 
 .banner-head{
@@ -116,4 +128,95 @@ body {
     font-family: "Inter", sans-serif; ;
     margin-top: 0;
     line-height: 1.5;
+}
+
+
+/*plants*/
+
+.plants{
+    margin-bottom: 210px;
+}
+
+.plants-description{
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.plants-description h1{
+    font-size: 40px;
+
+}
+
+.plants-description p{
+    font-family: "Inter", sans-serif;
+}
+
+.plants-card-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.plants-card{
+    width: 270px;
+    height: 485px;
+    text-align: center;
+    justify-content: center;
+}
+
+.plants-card h2, h3{
+    font-family: "Inter", sans-serif;
+
+}
+
+.plants-card h3{
+    font-weight: 500;
+}
+
+.plants-card img {
+            width: 270px;
+            height: 323px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+/*lover style*/
+
+.lover{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.lover-description{
+    margin-left: 20px;
+}
+.lover-description h1{
+    font-size: 45px;
+}
+
+.lover-section li{
+    color: #8987A1;
+    font-family: "Inter", sans-serif;
+    margin-top: 20px;
+    font-weight: 200px;
+    text-decoration: none;
+    line-height: 1.2;
+}   
+
+.des{
+    font-weight: 400;
+}
+
+.badge{
+    position: absolute;
+    height: 286px;
+    width: 286px;
+    margin-left: -195px;
+    margin-top: -130px;
+    filter: 
+     drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.4))
+     drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
 }
