@@ -22,7 +22,10 @@ a {
 
 /*colors*/
 
-
+.container {
+    max-width: 1200px;
+    margin: 0 150px;
+}
 
 .pri-color {
     color: #E95A08;
@@ -41,10 +44,18 @@ a {
     border: 0;
     cursor: pointer;
 }
+.news-btn {
+    background-color: #E95A08;
+    font-family: "Inter", sans-serif;
+    padding: 10px 20px;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
 
 
 body {
-    margin: 0 150px;
+    margin: 0 ;
 
 }
 
@@ -347,4 +358,48 @@ h3 {
 
 .largeH{
     font-size: 30px;
+}
+
+/*Join style*/
+
+
+/* Full-width sections */
+
+.newsletter-section{
+    background-image: url('./assets/news-letter-bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.news-title{
+    font-size: 30px;
+    
+    
+}
+
+.email-form{
+    display: flex;
+}
+.news-container{
+    padding: 193px 305px;
+}
+
+.email{
+    width: 75%;
+    border: 0;
+    
+}
+.news-btn{
+    width: 25%;
+}
+
+.email-form input {
+    padding: 12px 20px 12px 15px; 
 }

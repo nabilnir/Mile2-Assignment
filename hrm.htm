@@ -1,117 +1,609 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Faugei | Home</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./assets/flower.png" type="image/x-icon">
     <style>
-.promo-section {
-  display: flex;
-  gap: 16px;
-  width: 753px;
-  height: 423px;
-  background: #f4f4f4;
-  box-sizing: border-box;
-  padding: 0;
+      /* Base Styles */
+:root {
+    --primary-color: #E95A08;
+    --secondary-color: #8987A1;
+    --white: #ffffff;
+    --black: #000000;
+    --text-dark: #333333;
+    --text-light: #f4f4f4;
+    --font-heading: "Noto Serif", serif;
+    --font-body: "Inter", sans-serif;
 }
 
-.promo-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 300px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.promo-card {
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  color: white;
-  border-radius: 12px;
-  overflow: hidden;
-  min-height: 130px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0 150px;
 }
 
-.promo-card.small {
-  height: 130px;
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
 }
 
-.promo-card.large {
-  flex: 1;
-  min-width: 437px;
-  display: flex;
-  align-items: flex-end;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.promo-text {
-  background: linear-gradient(0deg, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.0) 100%);
-  padding: 20px;
-  width: 100%;
-  font-size: 18px;
-  font-weight: 600;
+ul {
+    list-style: none;
 }
 
-.promo-text.large {
-  padding-bottom: 40px;
-  font-size: 2em;
-  font-weight: bold;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-.promo-discount {
-  display: block;
-  margin-bottom: 10px;
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.pri-color {
+    color: var(--primary-color);
+}
+
+.sec-color {
+    color: var(--secondary-color);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pri-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    width: 100%;
+}
+
+.pri-btn:hover {
+    background-color: #d14e07;
 }
 
 .shop-btn {
-  background: #fff;
-  color: #4A7C59;
-  border: none;
-  border-radius: 3px;
-  padding: 8px 18px;
-  font-size: 1em;
-  font-weight: bold;
-  margin-top: 4px;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-  text-transform: uppercase;
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: none;
+    padding: 8px 18px;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
 }
 
+.shop-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.large-btn {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+}
+
+.news-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+}
+
+/* Header Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.navlist {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+}
+
+.navs {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.navs-active {
+    color: var(--black);
+    font-weight: 700;
+}
+
+.cart {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Banner Styles */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 486px;
+    margin: 115px 0 70px;
+}
+
+.banner-description {
+    width: 50%;
+}
+
+.banner-description h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.banner-head {
+    color: var(--primary-color);
+}
+
+.banner-description p {
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Plants Section */
+.plants {
+    margin-bottom: 120px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.plants-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.plants-card {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.plants-card:hover {
+    transform: translateY(-5px);
+}
+
+.plants-card img {
+    width: 100%;
+    height: 323px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.plants-card h3 {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Lover Section */
+.lover {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 120px;
+}
+
+.lover-image {
+    position: relative;
+    flex: 1;
+}
+
+.badge {
+    position: absolute;
+    width: 286px;
+    height: 286px;
+    left: -100px;
+    top: -50px;
+    filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.4)) 
+            drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.lover-content {
+    flex: 1;
+}
+
+.lover-content h1 {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.lover-description li {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Deal Section */
+.deal {
+    margin: 120px 0;
+}
+
+.promo-section {
+    display: flex;
+    gap: 16px;
+    height: 423px;
+}
+
+.promo-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 300px;
+}
+
+.promo-card {
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.promo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 100%);
+}
+
+.promo-card.small {
+    height: calc(50% - 8px);
+}
+
+.promo-card.large {
+    flex: 1;
+}
+
+.promo-text {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    width: 100%;
+    color: var(--white);
+    text-align: center;
+}
+
+.large-text {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.promo-discount {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background-image: url('./assets/news-letter-bg.png');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    text-align: center;
+    color: var(--white);
+    margin-left: calc(-50vw + 50%);
+    width: 100vw;
+}
+
+.newsletter-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.newsletter-form input {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 70%;
+    font-size: 16px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    body {
+        margin: 0 50px;
+    }
+    
+    .plants-card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .banner {
+        flex-direction: column;
+        height: auto;
+        gap: 40px;
+    }
+    
+    .banner-description {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .lover {
+        flex-direction: column;
+    }
+    
+    .plants-card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .promo-section {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .promo-cards {
+        width: 100%;
+        flex-direction: row;
+    }
+    
+    .promo-card.small {
+        width: 50%;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0 20px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+    
+    .navlist {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .plants-card-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .promo-cards {
+        flex-direction: column;
+    }
+    
+    .promo-card.small {
+        width: 100%;
+    }
+}
     </style>
 </head>
+
 <body>
-    <div class="promo-section">
-  <div class="promo-cards">
-    <div class="promo-card small" style="background-image: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80');">
-      <div class="promo-text">
-        <span class="promo-discount">60% Off | Bloom Plant</span>
-        <button class="shop-btn">Shop Now</button>
-      </div>
-    </div>
-    <div class="promo-card small" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80');">
-      <div class="promo-text">
-        <span class="promo-discount">30% Off | Ana Plant</span>
-        <button class="shop-btn">Shop Now</button>
-      </div>
-    </div>
-  </div>
-  <div class="promo-card large" style="background-image: url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80');">
-    <div class="promo-text large">
-      <span class="promo-discount">25% Off | Zabo Plant</span>
-      <button class="shop-btn">Shop Now</button>
-    </div>
-  </div>
-</div>
+    <main class="container">
+        <header>
+            <!-- Navbar Section -->
+            <nav class="navbar">
+                <img src="./assets/logo.png" alt="Faugei logo" class="logo">
+                <ul class="navlist">
+                    <li><a href="#" class="navs-active"><b>Home</b></a></li>
+                    <li><a href="#" class="navs">Shop</a></li>
+                    <li><a href="#" class="navs">About Us</a></li>
+                    <li class="navs-cart"><a href="#" class="navs"><img src="./assets/cart.png" alt="Shopping cart"
+                                class="cart">Cart($56)</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Banner Section -->
+        <section class="banner">
+            <div class="banner-description">
+                <h1>ALWAYS <span class="banner-head">FRESH<br>FLOWERS</span></h1>
+                <p class="sec-color">Indulge your senses with the beauty and fragrance of our fresh flower shop.
+                    From classic roses to exotic blooms, we offer a wide variety of fresh flowers
+                    that are perfect for any occasion.</p>
+            </div>
+            <div class="banner-image">
+                <img src="./assets/hero-flower.png" alt="Fresh flower arrangement">
+            </div>
+        </section>
+
+        <!-- Our Plants Section -->
+        <section class="plants">
+            <div class="section-header">
+                <h1><span class="banner-head">Our</span> Plants</h1>
+                <p class="sec-color">Discover lush greenery for every space and style.
+                    From low-maintenance succulents to statement fiddle-leaf figs,
+                    our healthy, handpicked plants bring life to any room.
+                    Perfect for beginners and plant lovers alike—each comes
+                    with expert care tips. Brighten your home or gift someone
+                    joy with nature's beauty.</p>
+            </div>
+            <div class="plants-card-container">
+                <div class="plants-card">
+                    <img src="./assets/f1.png" alt="Lily Blossom">
+                    <h3>Lily Blossom</h3>
+                    <h2>20 USD</h2>
+                    <button class="pri-btn">ADD TO CART</button>
+                </div>
+                <div class="plants-card">
+                    <img src="./assets/f3.jpg" alt="Cherry Blossom">
+                    <h3>Cherry Blossom</h3>
+                    <h2>25 USD</h2>
+                    <button class="pri-btn">ADD TO CART</button>
+                </div>
+                <div class="plants-card">
+                    <img src="./assets/f5.jpg" alt="Blue Hydrangea">
+                    <h3>Blue Hydrangea</h3>
+                    <h2>30 USD</h2>
+                    <button class="pri-btn">ADD TO CART</button>
+                </div>
+                <div class="plants-card">
+                    <img src="./assets/f6.jpg" alt="Pink Tulips">
+                    <h3>Pink Tulips</h3>
+                    <h2>18 USD</h2>
+                    <button class="pri-btn">ADD TO CART</button>
+                </div>
+                <div class="plants-card">
+                    <img src="./assets/f7.jpg" alt="Sakura Branch">
+                    <h3>Sakura Branch</h3>
+                    <h2>35 USD</h2>
+                    <button class="pri-btn">ADD TO CART</button>
+                </div>
+                <div class="plants-card">
+                    <img src="./assets/f8.jpg" alt="Pink Roses">
+                    <h3>Pink Roses</h3>
+                    <h2>28 USD</h2>
+                    <button class="pri-btn">ADD TO CART</button>
+                </div>
+                <div class="plants-card">
+                    <img src="./assets/f9.jpg" alt="Spring Blossoms">
+                    <h3>Spring Blossoms</h3>
+                    <h2>22 USD</h2>
+                    <button class="pri-btn">ADD TO CART</button>
+                </div>
+                <div class="plants-card">
+                    <img src="./assets/f10.jpg" alt="Baby's Breath">
+                    <h3>Baby's Breath</h3>
+                    <h2>15 USD</h2>
+                    <button class="pri-btn">ADD TO CART</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lover Section -->
+        <section class="lover">
+            <div class="lover-image">
+                <img src="./assets/flower-store.png" alt="Flower store interior">
+                <img src="./assets/trusted-badge.png" alt="Trusted badge" class="badge">
+            </div>
+            <div class="lover-content">
+                <h1>Flower & Plants Lover</h1>
+                <ul class="lover-description">
+                    <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh, premium quality arrangements that transform any space into a natural paradise.</li>
+                    <li>Bring home the magic of blooming gardens with our diverse range of floral arrangements and botanical treasures. Whether for special occasions or everyday joy, our flowers are designed to inspire and delight every flower lover.</li>
+                    <li>Discover nature's finest collection with our carefully curated selection of seasonal flowers and elegant plants. Each bloom is handpicked for freshness and beauty, perfect for creating memorable moments and stunning décor.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Deal Section -->
+        <section class="deal">
+            <div class="section-header">
+                <h1><span class="pri-color">Latest</span> Deals</h1>
+                <p class="sec-color">Experience the best of our flower collection without breaking the bank. Our latest deals feature carefully selected premium arrangements, fresh seasonal blooms, and stunning plants - all at prices designed to spread joy and savings throughout your home.</p>
+            </div>
+            <div class="promo-section">
+                <div class="promo-cards">
+                    <div class="promo-card small" style="background-image: url('./assets/deal-bloom.png');">
+                        <div class="promo-text">
+                            <span class="promo-discount">60% Off | Bloom Plant</span>
+                            <a href="#" class="shop-btn">Shop Now</a>
+                        </div>
+                    </div>
+                    <div class="promo-card small" style="background-image: url('./assets/deal-ana.png');">
+                        <div class="promo-text">
+                            <span class="promo-discount">30% Off | Ana Plant</span>
+                            <a href="#" class="shop-btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="promo-card large" style="background-image: url('./assets/deal-zabo.png');">
+                    <div class="promo-text">
+                        <span class="promo-discount large-text">25% Off | Zabo Plant</span>
+                        <a href="#" class="shop-btn large-btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h2>Join the colorful Bunch</h2>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="news-btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Footer content would go here -->
+            <p>&copy; 2023 Faugei. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
-
-
-
-
