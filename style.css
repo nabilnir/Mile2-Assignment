@@ -1,33 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-.pri-font h1, h2, h3, h4 {
-  font-family: "Noto Serif", serif;
-  font-weight: 700;
-  font-style: normal;
-  
+.pri-font h1,
+h2,
+h3,
+h4 {
+    font-family: "Noto Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+
 }
 
-.sec-font p, li, a{
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
+.sec-font p,
+li,
+a {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
 /*colors*/
 
 
 
-.pri-color{
+.pri-color {
     color: #E95A08;
 }
 
-.sec-color{
+.sec-color {
     color: #8987A1;
 }
 
-.pri-btn{
+.pri-btn {
     background-color: #E95A08;
     font-family: "Inter", sans-serif;
     padding: 10px 20px;
@@ -40,7 +45,7 @@
 
 body {
     margin: 0 150px;
-    
+
 }
 
 
@@ -59,9 +64,10 @@ body {
 
 
 
-.navs-active{
-       color: black;
+.navs-active {
+    color: black;
 }
+
 .navbar {
     justify-content: space-between;
     display: flex;
@@ -73,8 +79,8 @@ body {
 .navlist {
     display: flex;
     gap: 48px;
-    padding: 0; 
-    align-items: center; 
+    padding: 0;
+    align-items: center;
     list-style: none;
 }
 
@@ -89,12 +95,12 @@ body {
     color: #8987A1;
     text-decoration: none;
     font-size: 0.9rem;
-    
+
 }
 
 /*banner Style*/
 
-.banner{
+.banner {
     display: flex;
     justify-content: space-between;
     height: 486px;
@@ -102,12 +108,12 @@ body {
     margin-bottom: 70px;
 }
 
-.banner-head{
+.banner-head {
     color: #E95A08;
 }
 
 
-.banner-description{
+.banner-description {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -116,16 +122,18 @@ body {
     padding: 0;
     margin: 0;
     margin-top: 72px;
-    
-    
+
+
 }
-.banner-description h1{
+
+.banner-description h1 {
     font-size: 50px;
     margin-bottom: 20px;
 }
 
-.banner-description p{
-    font-family: "Inter", sans-serif; ;
+.banner-description p {
+    font-family: "Inter", sans-serif;
+    ;
     margin-top: 0;
     line-height: 1.5;
 }
@@ -133,91 +141,210 @@ body {
 
 /*plants*/
 
-.plants{
+.plants {
     margin-bottom: 210px;
 }
 
-.plants-description{
+.plants-description {
     text-align: center;
     justify-content: center;
     margin-bottom: 50px;
 }
 
-.plants-description h1{
+.plants-description h1 {
     font-size: 40px;
 
 }
 
-.plants-description p{
+.plants-description p {
     font-family: "Inter", sans-serif;
 }
 
-.plants-card-container{
+.plants-card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     justify-content: center;
 }
 
-.plants-card{
+.plants-card {
     width: 270px;
     height: 485px;
     text-align: center;
     justify-content: center;
 }
 
-.plants-card h2, h3{
+.plants-card h2,
+h3 {
     font-family: "Inter", sans-serif;
 
 }
 
-.plants-card h3{
+.plants-card h3 {
     font-weight: 500;
 }
 
 .plants-card img {
-            width: 270px;
-            height: 323px;
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
+    width: 270px;
+    height: 323px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
 
 /*lover style*/
 
-.lover{
+.lover {
     display: flex;
     justify-content: space-between;
     gap: 40px;
 }
 
-.lover-description{
+.lover-description {
     margin-left: 20px;
 }
-.lover-description h1{
+
+.lover-description h1 {
     font-size: 45px;
 }
 
-.lover-section li{
+.lover-section li {
     color: #8987A1;
     font-family: "Inter", sans-serif;
     margin-top: 20px;
     font-weight: 200px;
     text-decoration: none;
     line-height: 1.2;
-}   
+}
 
-.des{
+.des {
     font-weight: 400;
 }
 
-.badge{
+.badge {
     position: absolute;
     height: 286px;
     width: 286px;
     margin-left: -195px;
     margin-top: -130px;
-    filter: 
-     drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.4))
-     drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+    filter:
+        drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.4)) drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
 }
 
+/*deal style*/
+
+.deal {
+    margin-top: 135px;
+}
+
+.deal-description {
+    margin-bottom: 120px;
+    text-align: center;
+    justify-content: center;
+}
+
+.deal-description h1 {
+    font-size: 40px;
+
+}
+
+.deal-description p {
+    color: #8987A1;
+    font-family: "Inter", sans-serif;
+    font-weight: 200px;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+/*promo*/
+
+.promo-section {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    height: 423px;
+    box-sizing: border-box;
+    gap: 16px;
+    margin-top: -30px;
+    margin-bottom: 120px;
+
+
+}
+
+.promo-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 300px;
+    height: 100%;
+    /* Ensure full height taken */
+    flex-shrink: 0;
+}
+
+.promo-card {
+    background-size: cover;
+    background-position: center;
+    border-radius: 22px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promo-card.small {
+    flex: 1;
+   
+}
+
+.promo-card.large {
+    flex: 1;
+    height: 100%;
+    border-radius: 22px;
+}
+
+.promo-text {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 10
+}
+
+
+.promo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.promo-overlay.large {
+    height: 100%;
+    padding-bottom: 40px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.promo-discount {
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Noto Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+.shop-link{
+    font-weight: 300;
+    color: white;
+}
+
+.largeH{
+    font-size: 30px;
+}
