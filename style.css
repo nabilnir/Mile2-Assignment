@@ -513,10 +513,13 @@ h3 {
 
 /*responsive style*/
 
+/*responsive style*/
+
 @media screen and (max-width: 576px) {
     .container {
-        margin: 0 0.5rem;
-        padding: 0 0.5rem;
+        margin: 0 1rem;
+        padding: 0;
+        max-width: 100%;
     }
 
     h1,
@@ -537,56 +540,61 @@ h3 {
         align-items: center;
         height: 2.375rem;
         margin-top: 1rem;
+        margin-bottom: 2rem;
     }
-
 
     .navs,
     .navs-active {
         display: none;
     }
 
-    .navbar {
-        flex-direction: row;
-        height: auto;
-        gap: 1rem;
-        padding: 1rem 0;
-    }
-
-
     .navlist {
         flex-direction: row;
         gap: 1rem;
     }
 
-
+    /* Banner fixes */
     .banner {
         flex-direction: column-reverse;
         height: auto;
-        margin: 3rem 0;
+        margin: 0;
+        margin-bottom: 3rem;
         padding: 0;
+        gap: 1rem;
     }
 
     .banner-description {
         width: 100%;
-        margin-top: 1rem;
-        font-size: 1.5rem;
         padding: 0;
+        margin-top: 0;
     }
 
     .banner-description h1 {
         font-size: 1.5rem;
-
+        margin-bottom: 1rem;
     }
 
     .banner-description p {
         font-size: 0.875rem;
+        margin-top: 0;
+    }
+
+    .banner-img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .banner-img img {
         width: 100%;
-        height: 100%;
+        height: auto;
         object-fit: cover;
+        display: block;
+    }
 
+    /* Plants section fixes */
+    .plants {
+        margin-bottom: 3rem;
     }
 
     .plants-description h1 {
@@ -600,53 +608,81 @@ h3 {
     .plants-card-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 1rem;
         justify-content: center;
+        margin: 0;
+        padding: 0;
     }
 
     .plants-card {
-        width: 10.6875rem;
+        width: 100%;
+        height: auto;
     }
 
     .plants-card img {
         width: 100%;
-        object-fit: fill;
+        height: 200px;
+        object-fit: cover;
     }
 
     .plants-card h2,
-    h3 {
+    .plants-card h3 {
         font-family: "Inter", sans-serif;
-        font-size: small;
-
+        font-size: 0.875rem;
     }
 
     .plants-card h3 {
         font-weight: 500;
     }
 
+    /* Lover section fixes */
     .lover {
         flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
 
+    .lover-description {
+        margin-left: 0;
     }
 
     .lover-description h1 {
         font-size: 1.5rem;
     }
 
-    .lover-img img {
+    .lover-img {
+        width: 100%;
+        position: relative;
+    }
 
-        width: 22.375rem;
-        height: 24.75rem;
+    .lover-img img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     .badge {
         display: none;
     }
 
-
     .lover-section {
         font-size: 0.875rem;
-        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .lover-section li {
+        margin-top: 1rem;
+    }
+
+    /* Deal section fixes */
+    .deal {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .deal-description {
+        margin-bottom: 2rem;
     }
 
     .deal-description h1 {
@@ -657,25 +693,39 @@ h3 {
         font-size: 0.875rem;
     }
 
-    .promo-section {
-        flex-direction: column;
-    }
-
+    /* Promo section fixes */
     .promo-section {
         display: flex;
         flex-direction: column;
         gap: 1rem;
         width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .promo-cards {
+        display: contents;
     }
 
     .promo-card {
-        height: 11.53rem;
+        height: 180px;
         width: 100%;
         border-radius: 12px;
         position: relative;
         overflow: hidden;
-        background-size: fill;
+        background-size: cover;
         background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .promo-card.small,
+    .promo-card.large {
+        width: 100%;
+        height: 180px;
+        flex: none;
     }
 
     .promo-card::before {
@@ -685,68 +735,78 @@ h3 {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.644);
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
     }
 
     .promo-text {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 1rem;
+        position: relative;
+        z-index: 2;
+        text-align: center;
         color: white;
     }
 
-    .promo-card.small,
-    .promo-card.large {
-
-        width: 100%;
-        object-fit: fill;
-        border-radius: 12px;
+    .promo-discount {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        display: block;
     }
 
-    .promo-cards {
-        display: contents;
-
-    }
-
-    .promo-discount,
     .shop-link {
         font-size: 1rem;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        color: white;
+        text-decoration: underline;
     }
 
-    .newsletter-section {
-        background-position: cover;
-        height: 17.18rem;
+    .largeH {
+        font-size: 1.2rem;
+    }
 
+    /* Newsletter section fixes */
+    .newsletter-section {
+        background-size: cover;
+        background-position: center;
+        height: auto;
+        margin: 0;
     }
 
     .news-container {
-        padding: 6.875rem 2.25rem 4.03rem 2.25rem;
+        padding: 4rem 1rem;
+    }
+
+    .news-title h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .email-form {
+        display: flex;
+        gap: 0;
+        max-width: 100%;
+    }
+
+    .email {
+        width: 70%;
+        padding: 0.75rem;
+        border: none;
     }
 
     .news-btn {
-        text-align: center;
-        justify-content: center;
-        padding: 0.5rem -3rem;
-        padding-right: 1rem;
-        font-size: 0.675rem;
+        width: 30%;
+        padding: 0.75rem;
+        font-size: 0.875rem;
     }
 
-
-
+    /* Footer fixes */
     .footer {
-        padding: 40px 20px;
+        padding: 2rem 1rem;
         max-width: 100%;
     }
 
     .footer-content {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 2rem;
         align-items: flex-start;
         text-align: left;
     }
@@ -754,7 +814,6 @@ h3 {
     .footer-brand {
         max-width: 100%;
         padding-right: 0;
-        
         order: 1;
     }
 
@@ -762,16 +821,19 @@ h3 {
         font-size: 0.875rem;
         text-align: left;
         padding-top: 1rem;
+        margin: 0;
     }
 
     .footer-links {
         width: 100%;
         order: 2;
-        gap: 2rem;
+        gap: 1.5rem;
         margin-top: 0;
     }
 
-
+    .footer-links:nth-of-type(2) {
+        order: 3;
+    }
 
     .social-links {
         order: 4;
@@ -780,4 +842,8 @@ h3 {
         margin-top: 0;
     }
 
+    .social-link img {
+        width: 24px;
+        height: 24px;
+    }
 }
