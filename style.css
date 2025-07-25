@@ -488,7 +488,7 @@ h3 {
 
 .footer-links {
     font-weight: 500;
-    font-family: ;
+
 }
 
 .footer {
@@ -509,15 +509,16 @@ h3 {
 }
 
 
-
-
-/*responsive style*/
-
 /*responsive style*/
 
 @media screen and (max-width: 576px) {
+
+    body {
+        margin-top: 0.5rem;
+    }
+
     .container {
-        margin: 0 1rem;
+        margin: 1rem 1rem;
         padding: 0;
         max-width: 100%;
     }
@@ -527,6 +528,7 @@ h3 {
     h3,
     h4 {
         font-size: 1.5rem;
+        font-family: "Noto Serif", serif;
     }
 
     .logo {
@@ -539,7 +541,7 @@ h3 {
         display: flex;
         align-items: center;
         height: 2.375rem;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         margin-bottom: 2rem;
     }
 
@@ -553,7 +555,6 @@ h3 {
         gap: 1rem;
     }
 
-    /* Banner fixes */
     .banner {
         flex-direction: column-reverse;
         height: auto;
@@ -577,12 +578,16 @@ h3 {
     .banner-description p {
         font-size: 0.875rem;
         margin-top: 0;
+        line-height: 1.1rem;
     }
 
     .banner-img {
-        width: 100%;
-        margin: 0;
+
         padding: 0;
+        overflow-x: visible;
+        width: 100vw;
+        margin-left: -1rem;
+        margin-right: -1rem;
     }
 
     .banner-img img {
@@ -592,7 +597,7 @@ h3 {
         display: block;
     }
 
-    /* Plants section fixes */
+
     .plants {
         margin-bottom: 3rem;
     }
@@ -635,19 +640,25 @@ h3 {
         font-weight: 500;
     }
 
-    /* Lover section fixes */
+
     .lover {
         flex-direction: column;
         gap: 1rem;
         margin-bottom: 3rem;
+
     }
 
     .lover-description {
-        margin-left: 0;
+        margin-left: 2rem;
+    }
+
+    .lover-section {
+        padding-left: 1rem;
     }
 
     .lover-description h1 {
         font-size: 1.5rem;
+        margin-right: -1rem;
     }
 
     .lover-img {
@@ -675,7 +686,7 @@ h3 {
         margin-top: 1rem;
     }
 
-    /* Deal section fixes */
+
     .deal {
         margin-top: 3rem;
         margin-bottom: 3rem;
@@ -693,7 +704,7 @@ h3 {
         font-size: 0.875rem;
     }
 
-    /* Promo section fixes */
+
     .promo-section {
         display: flex;
         flex-direction: column;
@@ -762,7 +773,7 @@ h3 {
         font-size: 1.2rem;
     }
 
-    /* Newsletter section fixes */
+
     .newsletter-section {
         background-size: cover;
         background-position: center;
@@ -770,8 +781,10 @@ h3 {
         margin: 0;
     }
 
+
+
     .news-container {
-        padding: 4rem 1rem;
+        padding: 4rem 5rem;
     }
 
     .news-title h2 {
@@ -794,10 +807,10 @@ h3 {
     .news-btn {
         width: 30%;
         padding: 0.75rem;
-        font-size: 0.875rem;
+        font-size: 0.645rem;
     }
 
-    /* Footer fixes */
+    /* Footer style */
     .footer {
         padding: 2rem 1rem;
         max-width: 100%;
@@ -814,7 +827,11 @@ h3 {
     .footer-brand {
         max-width: 100%;
         padding-right: 0;
+        padding-bottom: 0; 
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
         order: 1;
+
     }
 
     .tagline {
@@ -826,13 +843,13 @@ h3 {
 
     .footer-links {
         width: 100%;
-        order: 2;
+        order: 3;
         gap: 1.5rem;
         margin-top: 0;
     }
 
     .footer-links:nth-of-type(2) {
-        order: 3;
+        order: 2;
     }
 
     .social-links {
